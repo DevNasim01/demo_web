@@ -320,6 +320,22 @@
     <script>
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
+
+    
+const iboxElements = document.querySelectorAll(".ibox");
+
+
+iboxElements.forEach(function (element) {
+  element.addEventListener("click", function () {
+    element.style.backgroundColor = 'rgba(0, 0, 0, 0.10)';
+    setTimeout(function () {
+      element.style.backgroundColor = '';
+    }, 200);
+  });
+});
+
  
 const vh = document.querySelector(".vh");
 const images = ['image2.jpg', 'image3.jpg','image1.jpg'];
@@ -359,7 +375,6 @@ const mainDiv = document.querySelector(".main");
         }
 
         // Initialize the state
-        hideElement(mainDiv);
         hideElement(bar2);
         hideElement(bar3);
 
