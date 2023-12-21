@@ -41,7 +41,7 @@ border: none;
     top: 0%;
     z-index: -1;
     box-shadow: inset 0px 60px 300px 10px rgba(0, 0, 0, 0.825);
-    overflow: auto;
+    overflow: hidden;
     
 }
 .nav input{
@@ -583,3 +583,63 @@ li:hover{
 .iboxbac{
     background-color: rgba(0, 0, 0, 0.12);
 }
+/* .span1 {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    animation: scale 1s ease-in forwards;
+    z-index: 2;
+    display: none;
+    
+}
+
+.span2 {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+    animation: scale2 0.4s ease-in forwards;
+    z-index: 3;
+    display: none;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);                                    for fixeing the buggg.....
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes scale2 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+} */
+
+html.lenis {
+    height: auto;
+  }
+  
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }

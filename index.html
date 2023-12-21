@@ -155,6 +155,9 @@
                         </div>
                         <div class="emoji">
                             <i class="fa-regular  fa-lightbulb click"></i>
+                            <!-- <div class="span1"> </div>
+                                                            will fixxed the bugg some ootherTime
+                            <div class="span2"> </div> -->
                             <i class="fa-regular fa-face-laugh-beam click"></i>
                             <i class="fa-regular fa-face-surprise click"></i>
                         </div>
@@ -353,7 +356,7 @@ function changeBackgroundImage() {
     setTimeout(() => {
       vh.style.opacity = '1';
       vh.style.backgroundColor = 'black';
-    }, 80);
+    }, 120);
   }, 300); 
 }
 
@@ -416,6 +419,18 @@ clickItems.forEach(function (item) {
   });
 });
 
+        // const span1 = document.querySelector('.span1');
+        // const span2 = document.querySelector('.span2');
+
+        // clickItems.addEventListener('click', () => {
+        //     span1.style.display = 'block';
+        //     span2.style.display = 'block';                    will fixxed the bugg some otherTime....
+
+        //     setTimeout(() => {
+        //         span1.style.display = 'none';
+        //         span2.style.display = 'none';
+        //     }, 1500);
+        // });
 
 document.getElementById('bac').addEventListener('click', function() {
   this.classList.add('clicked');
@@ -424,7 +439,19 @@ document.getElementById('bac').addEventListener('click', function() {
 
     }
 );
+src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js";
+const lenis = new Lenis()
 
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf);
 
 </script>
 </html>
